@@ -21,6 +21,10 @@
 	<link rel="icon" href="/favicon.ico" type="image/x-icon" id="page_favionc">
 	<link href="./img/min.css" rel="stylesheet">
 	<link rel="alternate icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
 
 </head>
 <body>
@@ -45,10 +49,10 @@
 						
 	<?php
 	$sql="select * from soul order by rand( ) limit 1";
-	$rs=mysql_query($sql);
+	$rs=mysqli_query($conn, $sql);
 	?>		
 			<?php
-		while($rows=mysql_fetch_assoc($rs))
+        while($rows=$rs -> fetch_assoc())
 		{
 		?>		
 						
